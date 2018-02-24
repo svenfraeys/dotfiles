@@ -114,3 +114,6 @@ set visualbell
 if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif    
+
+" NERDTree ignore .pyc files
+let NERDTreeIgnore = ['\.pyc$']
