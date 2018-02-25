@@ -34,8 +34,9 @@ Plugin 'davidhalter/jedi-vim'
 " python folding
 Plugin 'tmhedberg/SimpylFold'
 
-" syntax highlighting
-Plugin 'vim-syntastic/syntastic'
+" syntax highlighting, ale works async so should be faster
+" Plugin 'vim-syntastic/syntastic'
+Plugin 'w0rp/ale'
 
 " light status bar for vim
 Plugin 'bling/vim-airline'
@@ -117,3 +118,14 @@ endif
 
 " NERDTree ignore .pyc files
 let NERDTreeIgnore = ['\.pyc$']
+
+" code formatter yapf
+autocmd FileType python nnoremap <LocalLeader>= :0,$!yapf<CR>
+
+" isort
+autocmd FileType python nnoremap <LocalLeader>i :0,$!isort % -d<CR><CR>
+
+" set local map leader to comma
+" let mapleader=','
+" let maplocalleader=','
+
