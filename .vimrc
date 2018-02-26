@@ -38,10 +38,16 @@ Plugin 'tmhedberg/SimpylFold'
 " Plugin 'vim-syntastic/syntastic'
 Plugin 'w0rp/ale'
 
-" light status bar for vim
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+" fuzzy file searching
+Plugin 'wincent/command-t'
 
+" tag bar, needs ruby compiled in vim
+" Plugin 'majutsushi/tagbar'
+
+" light status bar for vim
+" Plugin 'bling/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
+Plugin 'lokaltog/vim-powerline'
 Plugin 'scrooloose/nerdtree'
 
 " send to maya plugin
@@ -50,9 +56,11 @@ Plugin 'yamahigashi/sendtomaya.vim'
 " goyo distraction free programming
 Plugin 'junegunn/goyo.vim'
 
+" async code running
+Plugin 'skywind3000/asyncrun.vim'
 
 " python IDE features
-" Plugin 'klen/python-mode'
+Plugin 'klen/python-mode'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -126,6 +134,10 @@ autocmd FileType python nnoremap <LocalLeader>= :0,$!yapf<CR>
 autocmd FileType python nnoremap <LocalLeader>i :0,$!isort % -d<CR><CR>
 
 " set local map leader to comma
-" let mapleader=','
-" let maplocalleader=','
+let mapleader=","
+let maplocalleader=","
+
+" disable rope from python-mode
+let g:pymode_rope = 0
+
 
