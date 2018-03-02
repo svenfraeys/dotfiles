@@ -60,7 +60,7 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'skywind3000/asyncrun.vim'
 
 " python IDE features
-Plugin 'klen/python-mode'
+" Plugin 'klen/python-mode'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -139,5 +139,4 @@ let maplocalleader=","
 
 " disable rope from python-mode
 let g:pymode_rope = 0
-
 
