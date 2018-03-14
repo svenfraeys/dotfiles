@@ -80,6 +80,10 @@ filetype plugin indent on    " required
 
 " enable syntax highlighting
 syntax enable
+
+" color column line
+set colorcolumn=79
+
 set background=light
 " set colors
 let g:solarized_termcolors=256
